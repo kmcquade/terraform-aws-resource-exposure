@@ -1,0 +1,83 @@
+output/*
+# IDEs
+.idea
+.vscode
+
+# Mac OS X
+.DS_Store
+
+# Serverless framework
+.serverless
+.requirements.zip
+node_modules/
+
+# Working directories
+tmp
+!.gitkeep
+
+# Python
+.coverage
+.Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Misc
+*.log
+_notes/*
+private/*
+tmp/*
+site/*
+
+#### By Technology/Language ####
+
+# Terraform
+**/.terraform/*
+*.plan
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars
+
+# NodeJS
+bower_components
+node_modules/*
+
+# Python
+.coverage.*
+*.egg-info/
+.pytest_cache/*
+build/
+dist/
+downloads/
+eggs/
+env/*
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+venv/*
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# HashiCorp
+.vagrant
+packer_cache/
+*.box
+
+#### Other
+*.pem
+/output/

@@ -1,0 +1,37 @@
+#formatter: md table
+header-from: main.tf
+footer-from: ""
+
+sections:
+  hide-all: false
+  hide: ["requirements", "modules"]
+  show-all: true
+  show: []
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+    {{ .Content }}
+    <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+output-values:
+  enabled: false
+  from: ""
+
+sort:
+  enabled: true
+  by:
+    - required
+#    - type
+
+settings:
+  anchor: true
+  color: true
+  default: true
+  escape: true
+  indent: 2
+  required: true
+  sensitive: true
+  type: true
