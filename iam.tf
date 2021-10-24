@@ -1,26 +1,3 @@
-resource "aws_iam_role" "example" {
-  name = var.name
-
-  assume_role_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-EOF
-
-  tags = {
-    Owner = "yourmom"
-  }
-}
 
 data "aws_iam_policy_document" "iam" {
   statement {
@@ -49,5 +26,14 @@ data "aws_iam_policy_document" "iam" {
       identifiers = ["*"]
       type        = "AWS"
     }
+  }
+}
+resource "aws_iam_role" "example" {
+  name = var.name
+
+  assume_role_policy = data.aws_iam_policy_document.iam.json
+
+  tags = {
+    Owner = "yourmom"
   }
 }
